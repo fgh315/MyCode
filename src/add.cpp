@@ -1,12 +1,15 @@
 /*************************************************************************
-    > File Name: world.c
+    > File Name: add.cpp
     > Author: Fgh
-    > Created Time: 2024年08月26日 星期一 13时59分21秒
+    > Created Time: 2024年08月22日 星期四 15时45分19秒
  ************************************************************************/
 
-#include <stdio.h>
+#include "func.h"
 
-int main(void){
-    print("Hello World!")
-    return 0;
+using namespace std;
+
+int add(int a, int b)
+{
+
+     return a+b;
 }

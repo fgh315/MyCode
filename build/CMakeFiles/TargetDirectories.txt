@@ -1,0 +1,3 @@
+/home/fgh/MyCode/build/CMakeFiles/main.dir
+/home/fgh/MyCode/build/CMakeFiles/edit_cache.dir
+/home/fgh/MyCode/build/CMakeFiles/rebuild_cache.dir

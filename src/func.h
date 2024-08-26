@@ -1,12 +1,7 @@
 /*************************************************************************
-    > File Name: hello.c
+    > File Name: func.h
     > Author: Fgh
-    > Created Time: 2024年08月26日 星期一 13时53分33秒
+    > Created Time: 2024年08月22日 星期四 15时43分48秒
  ************************************************************************/
 
-#include <stdio.h>
-
-int main(void){
-    print("hello world");
-    return 0;
-}
+int add(int a, int b);
