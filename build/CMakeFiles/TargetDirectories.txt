@@ -1,3 +1,9 @@
+/home/fgh/MyCode/build/CMakeFiles/_main.dir
+/home/fgh/MyCode/build/CMakeFiles/_main_shared.dir
 /home/fgh/MyCode/build/CMakeFiles/main.dir
 /home/fgh/MyCode/build/CMakeFiles/edit_cache.dir
 /home/fgh/MyCode/build/CMakeFiles/rebuild_cache.dir
+/home/fgh/MyCode/build/CMakeFiles/list_install_components.dir
+/home/fgh/MyCode/build/CMakeFiles/install.dir
+/home/fgh/MyCode/build/CMakeFiles/install/local.dir
+/home/fgh/MyCode/build/CMakeFiles/install/strip.dir

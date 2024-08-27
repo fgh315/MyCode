@@ -1,4 +1,4 @@
-CMakeFiles/main.dir/main.cpp.o: /home/fgh/MyCode/main.cpp \
+CMakeFiles/_main_shared.dir/src/main.cpp.o: /home/fgh/MyCode/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -134,4 +134,4 @@ CMakeFiles/main.dir/main.cpp.o: /home/fgh/MyCode/main.cpp \
  /usr/include/c++/9/bits/locale_facets.tcc \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
- /usr/include/c++/9/bits/istream.tcc /home/fgh/MyCode/func.h
+ /usr/include/c++/9/bits/istream.tcc /home/fgh/MyCode/src/func.h

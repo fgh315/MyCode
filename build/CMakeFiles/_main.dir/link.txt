@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/fgh/MyCode/lib/lib_main.a CMakeFiles/_main.dir/src/add.cpp.o CMakeFiles/_main.dir/src/main.cpp.o
+/usr/bin/ranlib /home/fgh/MyCode/lib/lib_main.a

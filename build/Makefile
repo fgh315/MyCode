@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fgh/MyCode/build/CMakeFiles /home/fgh/MyCode/build//CMakeFiles/progress.marks
@@ -117,6 +162,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named _main
+
+# Build rule for target.
+_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _main
+.PHONY : _main
+
+# fast build rule for target.
+_main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main.dir/build.make CMakeFiles/_main.dir/build
+.PHONY : _main/fast
+
+#=============================================================================
+# Target rules for targets named _main_shared
+
+# Build rule for target.
+_main_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _main_shared
+.PHONY : _main_shared
+
+# fast build rule for target.
+_main_shared/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main_shared.dir/build.make CMakeFiles/_main_shared.dir/build
+.PHONY : _main_shared/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -134,6 +205,8 @@ src/add.o: src/add.cpp.o
 
 # target to build an object file
 src/add.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main.dir/build.make CMakeFiles/_main.dir/src/add.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main_shared.dir/build.make CMakeFiles/_main_shared.dir/src/add.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/add.cpp.o
 .PHONY : src/add.cpp.o
 
@@ -142,6 +215,8 @@ src/add.i: src/add.cpp.i
 
 # target to preprocess a source file
 src/add.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main.dir/build.make CMakeFiles/_main.dir/src/add.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main_shared.dir/build.make CMakeFiles/_main_shared.dir/src/add.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/add.cpp.i
 .PHONY : src/add.cpp.i
 
@@ -150,6 +225,8 @@ src/add.s: src/add.cpp.s
 
 # target to generate assembly for a file
 src/add.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main.dir/build.make CMakeFiles/_main.dir/src/add.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main_shared.dir/build.make CMakeFiles/_main_shared.dir/src/add.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/add.cpp.s
 .PHONY : src/add.cpp.s
 
@@ -158,6 +235,8 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main.dir/build.make CMakeFiles/_main.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main_shared.dir/build.make CMakeFiles/_main_shared.dir/src/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
@@ -166,6 +245,8 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main.dir/build.make CMakeFiles/_main.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main_shared.dir/build.make CMakeFiles/_main_shared.dir/src/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
@@ -174,6 +255,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main.dir/build.make CMakeFiles/_main.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_main_shared.dir/build.make CMakeFiles/_main_shared.dir/src/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
@@ -184,7 +267,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... _main"
+	@echo "... _main_shared"
 	@echo "... main"
 	@echo "... src/add.o"
 	@echo "... src/add.i"
